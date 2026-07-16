@@ -168,7 +168,7 @@ class FileService {
   static Future<String> exportToTxt(Novel novel) async {
     final storage = await getStoragePath();
     final fileName = '${_sanitizeFilename(novel.title)}.txt';
-    final filePath = '${storage}/${fileName}';
+    final filePath = '$storage/$fileName';
 
     final buffer = StringBuffer();
     buffer.writeln(novel.title);
