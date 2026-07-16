@@ -415,7 +415,7 @@ class _EditorScreenState extends State<EditorScreen> {
             Expanded(
               child: ReorderableListView.builder(
                 itemCount: novel.chapters.length,
-                onReorder: novelProv.reorderChapters,
+                onReorderItem: novelProv.reorderChapters,
                 itemBuilder: (context, index) {
                   final chapter = novel.chapters[index];
                   return Card(

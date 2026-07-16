@@ -52,9 +52,9 @@ class EditorProvider extends ChangeNotifier {
     final hours = _writingDuration.inHours;
     final minutes = _writingDuration.inMinutes % 60;
     if (hours > 0) {
-      return '${hours}时${minutes}分';
+      return '$hours时$minutes分';
     }
-    return '${minutes}分';
+    return '$minutes分';
   }
 
   /// === 番茄钟 ===

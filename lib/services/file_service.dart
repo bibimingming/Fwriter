@@ -50,7 +50,7 @@ class FileService {
     final storage = await getStoragePath();
     // 文件名：小说名.novel
     final fileName = '${_sanitizeFilename(novel.title)}.novel';
-    final filePath = '${storage}/$fileName';
+    final filePath = '$storage/$fileName';
 
     final content = ParserService.serialize(novel);
     final file = File(filePath);
@@ -100,7 +100,7 @@ class FileService {
           '${now.year}${now.month.toString().padLeft(2, '0')}${now.day.toString().padLeft(2, '0')}'
           '_${now.hour.toString().padLeft(2, '0')}${now.minute.toString().padLeft(2, '0')}${now.second.toString().padLeft(2, '0')}';
       final baseName = _sanitizeFilename(novel.title);
-      final backupPath = '${backupDir}/${baseName}_$timestamp.novel.bak';
+      final backupPath = '$backupDir/${baseName}_$timestamp.novel.bak';
 
       final content = ParserService.serialize(novel);
       await File(backupPath).writeAsString(content, flush: true);
@@ -118,7 +118,7 @@ class FileService {
         '${now.year}${now.month.toString().padLeft(2, '0')}${now.day.toString().padLeft(2, '0')}'
         '_${now.hour.toString().padLeft(2, '0')}${now.minute.toString().padLeft(2, '0')}${now.second.toString().padLeft(2, '0')}';
     final baseName = _sanitizeFilename(novel.title);
-    final backupPath = '${backupDir}/${baseName}_manual_$timestamp.novel.bak';
+    final backupPath = '$backupDir/${baseName}_manual_$timestamp.novel.bak';
 
     final content = ParserService.serialize(novel);
     await File(backupPath).writeAsString(content, flush: true);

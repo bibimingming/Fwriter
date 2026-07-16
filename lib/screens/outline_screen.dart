@@ -115,7 +115,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
     return ReorderableListView.builder(
       padding: const EdgeInsets.fromLTRB(12, 12, 12, 80),
       itemCount: chapters.length,
-      onReorder: novelProv.reorderChapters,
+      onReorderItem: novelProv.reorderChapters,
       itemBuilder: (context, index) {
         final chapter = chapters[index];
         final isCurrent = index == novelProv.currentChapterIndex;
