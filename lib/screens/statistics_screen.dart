@@ -1,10 +1,8 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/statistics_provider.dart';
 import '../providers/novel_provider.dart';
 import '../models/novel.dart';
-import '../models/statistics.dart';
 import '../widgets/chart_widgets.dart';
 import '../utils/word_counter.dart';
 import '../utils/frequency_analyzer.dart';

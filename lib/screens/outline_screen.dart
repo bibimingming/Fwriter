@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import '../providers/novel_provider.dart';
 import '../models/chapter.dart';
 import '../utils/word_counter.dart';
-import '../widgets/chapter_tile.dart';
 import 'editor_screen.dart';
 
 /// 大纲视图页面

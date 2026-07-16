@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import '../services/search_service.dart';
 import '../models/novel.dart';
-import '../models/chapter.dart';
 
 /// 编辑器状态管理
 /// 管理编辑状态、番茄钟、分屏模式等

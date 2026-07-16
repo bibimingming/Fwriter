@@ -1,10 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:collection/collection.dart';
 import '../models/novel.dart';
 import '../models/statistics.dart';
 import '../utils/word_counter.dart';
 import '../utils/frequency_analyzer.dart';
-import '../utils/date_utils.dart';
 
 /// 全文统计看板状态管理
 class StatisticsProvider extends ChangeNotifier {

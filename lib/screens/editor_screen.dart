@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import '../providers/novel_provider.dart';
 import '../providers/editor_provider.dart';
 import '../providers/search_provider.dart';

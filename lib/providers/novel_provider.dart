@@ -1,9 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
 import '../models/novel.dart';
 import '../models/chapter.dart';
 import '../models/statistics.dart';
-import '../services/parser_service.dart';
 import '../services/file_service.dart';
 
 /// 小说数据状态管理
