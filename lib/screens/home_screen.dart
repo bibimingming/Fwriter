@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
           child: InkWell(
             borderRadius: BorderRadius.circular(16),
             onTap: () {
-              novelProv.openNovel(novel.filePath ?? '');
+              novelProv.openNovel(novel.filePath);
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const EditorScreen()),
@@ -189,7 +189,6 @@ class HomeScreen extends StatelessWidget {
 
   void _showCreateNovelDialog(BuildContext context, NovelProvider novelProv) {
     final titleController = TextEditingController();
-    final colorScheme = Theme.of(context).colorScheme;
 
     showDialog(
       context: context,

@@ -22,15 +22,14 @@ class BarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     return CustomPaint(
       size: Size.infinite,
       painter: _BarChartPainter(
         data: data,
         barWidth: barWidth,
         maxBarHeight: maxBarHeight,
-        barColor: barColor ?? colorScheme.primary,
-        gridColor: gridColor ?? colorScheme.outlineVariant.withValues(alpha: 0.2),
+        barColor: barColor,
+        gridColor: gridColor,
         labelBuilder: labelBuilder,
       ),
     );
@@ -139,14 +138,13 @@ class LineChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
     return CustomPaint(
       size: Size.infinite,
       painter: _LineChartPainter(
         points: points,
-        lineColor: lineColor ?? colorScheme.primary,
-        fillColor: fillColor ?? colorScheme.primary.withValues(alpha: 0.15),
-        pointColor: pointColor ?? colorScheme.primary,
+        lineColor: lineColor,
+        fillColor: fillColor,
+        pointColor: pointColor,
         lineWidth: lineWidth,
         labelBuilder: labelBuilder,
       ),
