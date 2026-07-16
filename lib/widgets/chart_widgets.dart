@@ -225,9 +225,8 @@ class _LineChartPainter extends CustomPainter {
       canvas.drawPath(linePath, linePaint);
     }
 
-        for (final pt in pathPoints) {
+    for (final pt in pathPoints) {
       canvas.drawCircle(pt, 3, dotPaint);
-    }
     }
 
     final textPainter = TextPainter(textDirection: TextDirection.ltr);
