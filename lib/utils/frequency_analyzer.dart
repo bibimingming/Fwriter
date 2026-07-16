@@ -10,7 +10,7 @@ class FrequencyAnalyzer {
   };
 
   /// 获取全文高频词 Top N
-  static List<_WordFrequency> getTopWords(String text, {int topN = 50}) {
+  static List<WordFrequency> getTopWords(String text, {int topN = 50}) {
     // 只保留中文字符，分词按单字处理+双字组合
     final clean = text.replaceAll(RegExp(r'[^\u4e00-\u9fff]'), '');
     if (clean.isEmpty) return [];
@@ -39,7 +39,7 @@ class FrequencyAnalyzer {
 
     return sorted
         .take(topN)
-        .map((e) => _WordFrequency(word: e.key, count: e.value))
+        .map((e) => WordFrequency(word: e.key, count: e.value))
         .toList();
   }
 
@@ -53,8 +53,8 @@ class FrequencyAnalyzer {
   }
 }
 
-class _WordFrequency {
+class WordFrequency {
   final String word;
   final int count;
-  _WordFrequency({required this.word, required this.count});
+  WordFrequency({required this.word, required this.count});
 }
