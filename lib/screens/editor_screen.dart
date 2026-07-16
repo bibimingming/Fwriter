@@ -98,7 +98,7 @@ class _EditorScreenState extends State<EditorScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.menu_book_outlined,
-                      size: 64, color: colorScheme.onSurfaceVariant.withOpacity(0.3)),
+                      size: 64, color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3)),
                   const SizedBox(height: 16),
                   Text(
                     '没有打开的小说',
@@ -112,7 +112,7 @@ class _EditorScreenState extends State<EditorScreen> {
                     '从主菜单创建或打开一部小说',
                     style: TextStyle(
                       fontSize: 13,
-                      color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+                      color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
                     ),
                   ),
                 ],
@@ -257,7 +257,7 @@ class _EditorScreenState extends State<EditorScreen> {
             '总 ${_formatCount(totalWords)}',
             style: TextStyle(
               fontSize: 11,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.7),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.7),
             ),
           ),
 
@@ -427,7 +427,7 @@ class _EditorScreenState extends State<EditorScreen> {
                         ? Theme.of(context)
                             .colorScheme
                             .primaryContainer
-                            .withOpacity(0.3)
+                            .withValues(alpha: 0.3)
                         : null,
                     child: ListTile(
                       leading: Text(
@@ -514,7 +514,7 @@ class _ToolsSheetState extends State<_ToolsSheet> {
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: colorScheme.onSurfaceVariant.withOpacity(0.3),
+                color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
@@ -652,7 +652,7 @@ class _ToolItem extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: colorScheme.secondaryContainer.withOpacity(0.5),
+                color: colorScheme.secondaryContainer.withValues(alpha: 0.5),
                 borderRadius: BorderRadius.circular(14),
               ),
               child: Icon(icon, color: colorScheme.onSecondaryContainer),

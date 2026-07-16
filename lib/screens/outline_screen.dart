@@ -32,7 +32,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.list_alt_outlined, size: 64,
-                      color: colorScheme.onSurfaceVariant.withOpacity(0.3)),
+                      color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3)),
                   const SizedBox(height: 16),
                   Text('请先打开一部小说',
                       style: TextStyle(color: colorScheme.onSurfaceVariant)),
@@ -84,7 +84,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(Icons.auto_stories_outlined, size: 80,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.3)),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3)),
           const SizedBox(height: 20),
           Text(
             '还没有章节',
@@ -99,7 +99,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
             '点击右下角 + 添加第一个章节',
             style: TextStyle(
               fontSize: 14,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
             ),
           ),
         ],
@@ -131,13 +131,13 @@ class _OutlineScreenState extends State<OutlineScreen> {
             borderRadius: BorderRadius.circular(12),
             side: BorderSide(
               color: isCurrent
-                  ? colorScheme.primary.withOpacity(0.5)
-                  : colorScheme.outlineVariant.withOpacity(0.3),
+                  ? colorScheme.primary.withValues(alpha: 0.5)
+                  : colorScheme.outlineVariant.withValues(alpha: 0.3),
               width: isCurrent ? 1.5 : 1,
             ),
           ),
           color: isCurrent
-              ? colorScheme.primaryContainer.withOpacity(0.15)
+              ? colorScheme.primaryContainer.withValues(alpha: 0.15)
               : colorScheme.surface,
           child: ExpansionTile(
             key: PageStorageKey('outline_$index'),
@@ -182,7 +182,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
                 ),
                 if (hasOutlineNote)
                   Icon(Icons.notes_rounded,
-                      size: 14, color: colorScheme.primary.withOpacity(0.6)),
+                      size: 14, color: colorScheme.primary.withValues(alpha: 0.6)),
                 const SizedBox(width: 8),
                 Text(
                   _formatCount(wordCount),
@@ -201,7 +201,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
                     padding:
                         const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                     decoration: BoxDecoration(
-                      color: colorScheme.primary.withOpacity(0.1),
+                      color: colorScheme.primary.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -215,7 +215,7 @@ class _OutlineScreenState extends State<OutlineScreen> {
                   ),
                 const SizedBox(width: 4),
                 Icon(Icons.drag_handle,
-                    color: colorScheme.onSurfaceVariant.withOpacity(0.4)),
+                    color: colorScheme.onSurfaceVariant.withValues(alpha: 0.4)),
               ],
             ),
             children: [
@@ -288,10 +288,10 @@ class _OutlineScreenState extends State<OutlineScreen> {
             hintText: '写下本章的写作思路、关键情节...',
             hintStyle: TextStyle(
               fontSize: 13,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.5),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.5),
             ),
             filled: true,
-            fillColor: colorScheme.surfaceContainerHighest.withOpacity(0.5),
+            fillColor: colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),
               borderSide: BorderSide.none,

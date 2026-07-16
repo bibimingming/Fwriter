@@ -37,7 +37,7 @@ class WordCountBadge extends StatelessWidget {
             '/ ${_formatCount(dailyGoal!)}',
             style: TextStyle(
               fontSize: 11,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
             ),
           ),
           const SizedBox(width: 6),

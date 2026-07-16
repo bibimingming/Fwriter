@@ -30,7 +30,7 @@ class BarChart extends StatelessWidget {
         barWidth: barWidth,
         maxBarHeight: maxBarHeight,
         barColor: barColor ?? colorScheme.primary,
-        gridColor: gridColor ?? colorScheme.outlineVariant.withOpacity(0.2),
+        gridColor: gridColor ?? colorScheme.outlineVariant.withValues(alpha: 0.2),
         labelBuilder: labelBuilder,
       ),
     );
@@ -97,7 +97,7 @@ class _BarChartPainter extends CustomPainter {
 
       textPainter.text = TextSpan(
         text: '${item.value.toInt()}',
-        style: TextStyle(fontSize: 10, color: barColor.withOpacity(0.8)),
+        style: TextStyle(fontSize: 10, color: barColor.withValues(alpha: 0.8)),
       );
       textPainter.layout();
       textPainter.paint(
@@ -145,7 +145,7 @@ class LineChartWidget extends StatelessWidget {
       painter: _LineChartPainter(
         points: points,
         lineColor: lineColor ?? colorScheme.primary,
-        fillColor: fillColor ?? colorScheme.primary.withOpacity(0.15),
+        fillColor: fillColor ?? colorScheme.primary.withValues(alpha: 0.15),
         pointColor: pointColor ?? colorScheme.primary,
         lineWidth: lineWidth,
         labelBuilder: labelBuilder,
@@ -210,7 +210,9 @@ class _LineChartPainter extends CustomPainter {
     if (pathPoints.length >= 2) {
       final fillPath = Path()
         ..moveTo(pathPoints.first.dx, chartHeight);
-      for (final pt in pathPoints) fillPath.lineTo(pt.dx, pt.dy);
+      for (final pt in pathPoints) {
+        fillPath.lineTo(pt.dx, pt.dy);
+      }
       fillPath.lineTo(pathPoints.last.dx, chartHeight);
       fillPath.close();
       canvas.drawPath(fillPath, fillPaint);
@@ -223,7 +225,10 @@ class _LineChartPainter extends CustomPainter {
       canvas.drawPath(linePath, linePaint);
     }
 
-    for (final pt in pathPoints) canvas.drawCircle(pt, 3, dotPaint);
+        for (final pt in pathPoints) {
+      canvas.drawCircle(pt, 3, dotPaint);
+    }
+    }
 
     final textPainter = TextPainter(textDirection: TextDirection.ltr);
     for (int i = 0; i < points.length; i++) {

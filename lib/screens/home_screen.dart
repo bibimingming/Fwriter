@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
           Icon(
             Icons.menu_book_outlined,
             size: 80,
-            color: colorScheme.onSurfaceVariant.withOpacity(0.3),
+            color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3),
           ),
           const SizedBox(height: 20),
           Text(
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             '点击下方按钮创建你的第一部小说吧',
             style: TextStyle(
               fontSize: 14,
-              color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+              color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
             ),
           ),
         ],
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
             side: BorderSide(
-              color: colorScheme.outlineVariant.withOpacity(0.3),
+              color: colorScheme.outlineVariant.withValues(alpha: 0.3),
               width: 1,
             ),
           ),
@@ -166,7 +166,7 @@ class HomeScreen extends StatelessWidget {
                           '最后编辑：${date_utils.DateUtil.timeAgo(lastEdited)}',
                           style: TextStyle(
                             fontSize: 11,
-                            color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+                            color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
                           ),
                         ),
                       ],
@@ -176,7 +176,7 @@ class HomeScreen extends StatelessWidget {
                   // 箭头
                   Icon(
                     Icons.chevron_right,
-                    color: colorScheme.onSurfaceVariant.withOpacity(0.4),
+                    color: colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
                   ),
                 ],
               ),
@@ -249,13 +249,13 @@ class _InfoChip extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, size: 12, color: colorScheme.onSurfaceVariant.withOpacity(0.6)),
+        Icon(icon, size: 12, color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6)),
         const SizedBox(width: 3),
         Text(
           label,
           style: TextStyle(
             fontSize: 11,
-            color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+            color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
           ),
         ),
       ],

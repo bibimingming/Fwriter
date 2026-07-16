@@ -17,7 +17,7 @@ class PlaceholderScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.construction_outlined,
-                size: 48, color: colorScheme.onSurfaceVariant.withOpacity(0.4)),
+                size: 48, color: colorScheme.onSurfaceVariant.withValues(alpha: 0.4)),
             const SizedBox(height: 16),
             Text(
               '$title 功能开发中',
@@ -31,7 +31,7 @@ class PlaceholderScreen extends StatelessWidget {
               '后续迭代将实现完整功能',
               style: TextStyle(
                 fontSize: 13,
-                color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+                color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
               ),
             ),
           ],

@@ -33,8 +33,8 @@ class ChapterTile extends StatelessWidget {
       elevation: 0,
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
       color: isSelected
-          ? colorScheme.primaryContainer.withOpacity(0.3)
-          : colorScheme.surfaceContainerHighest.withOpacity(0.5),
+          ? colorScheme.primaryContainer.withValues(alpha: 0.3)
+          : colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
       child: ListTile(
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 4),

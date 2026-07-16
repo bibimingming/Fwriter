@@ -65,7 +65,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(Icons.analytics_outlined, size: 64,
-                      color: colorScheme.onSurfaceVariant.withOpacity(0.3)),
+                      color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3)),
                   const SizedBox(height: 16),
                   Text('请先打开一部小说',
                       style: TextStyle(color: colorScheme.onSurfaceVariant)),
@@ -231,7 +231,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: colorScheme.outlineVariant.withOpacity(0.3)),
+        side: BorderSide(color: colorScheme.outlineVariant.withValues(alpha: 0.3)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -329,7 +329,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
           child: LineChartWidget(
             points: points,
             lineColor: colorScheme.primary,
-            fillColor: colorScheme.primary.withOpacity(0.15),
+            fillColor: colorScheme.primary.withValues(alpha: 0.15),
             pointColor: colorScheme.primary,
           ),
         ),
@@ -370,7 +370,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
             elevation: 0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12),
-              side: BorderSide(color: colorScheme.outlineVariant.withOpacity(0.3)),
+              side: BorderSide(color: colorScheme.outlineVariant.withValues(alpha: 0.3)),
             ),
             child: Padding(
               padding: const EdgeInsets.all(12),
@@ -383,7 +383,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                   return Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                      color: colorScheme.primaryContainer.withOpacity(opacity * 0.5),
+                      color: colorScheme.primaryContainer.withValues(alpha: opacity * 0.5),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
@@ -420,7 +420,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
             const SizedBox(height: 8),
             Card(
               elevation: 0,
-              color: colorScheme.errorContainer.withOpacity(0.3),
+              color: colorScheme.errorContainer.withValues(alpha: 0.3),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
@@ -433,7 +433,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
                     return Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
-                        color: colorScheme.errorContainer.withOpacity(0.5),
+                        color: colorScheme.errorContainer.withValues(alpha: 0.5),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -464,7 +464,7 @@ class _StatisticsScreenState extends State<StatisticsScreen>
       elevation: 0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
-        side: BorderSide(color: colorScheme.outlineVariant.withOpacity(0.3)),
+        side: BorderSide(color: colorScheme.outlineVariant.withValues(alpha: 0.3)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -599,7 +599,7 @@ class _PeriodChip extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: selected
-                ? colorScheme.primary.withOpacity(0.5)
+                ? colorScheme.primary.withValues(alpha: 0.5)
                 : colorScheme.outlineVariant,
           ),
         ),
